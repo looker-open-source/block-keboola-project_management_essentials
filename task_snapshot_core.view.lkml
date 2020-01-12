@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/task_snapshot.view"
+
 view: task_snapshot {
-  sql_table_name: TASK_SNAPSHOT ;;
+  extends: [task_snapshot_config]
+}
+
+view: task_snapshot_core {
+  sql_table_name: @{SCHEMA_NAME}.TASK_SNAPSHOT ;;
 
   dimension: task_snapshot_id {
     label: "Task Snapshot ID"

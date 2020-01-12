@@ -1,4 +1,5 @@
 explore: user_core {
-  label: "Member/Follower"
-  from: member
+  hidden: yes
+  extension: required
+  from: member_core
 }

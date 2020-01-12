@@ -1,8 +1,7 @@
 explore: project_core {
-  label: "Projects & Tasks"
   hidden: yes
   extension: required
-  
+
   join: project_member {
     type: left_outer
     sql_on: ${project.project_id} = ${project_member.project_id} ;;

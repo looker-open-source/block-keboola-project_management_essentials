@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/project_member.view"
+
 view: project_member {
-  sql_table_name: PROJECT_USER ;;
+  extends: [project_member_config]
+}
+
+view: project_member_core {
+  sql_table_name: @{SCHEMA_NAME}.PROJECT_USER ;;
 
   dimension: project_id {
     type: string

@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/task_event.view"
+
 view: task_event {
-  sql_table_name: TASK_EVENT ;;
+  extends: [task_event_config]
+}
+
+view: task_event_core {
+  sql_table_name: @{SCHEMA_NAME}.TASK_EVENT ;;
   drill_fields: [task_event_id]
 
   dimension: task_event_id {

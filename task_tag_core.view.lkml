@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/task_tag.view"
+
 view: task_tag {
-  sql_table_name: TASK_TAG ;;
+  extends: [task_tag_config]
+}
+
+view: task_tag_core {
+  sql_table_name: @{SCHEMA_NAME}.TASK_TAG ;;
 
   dimension: task_snapshot_id {
     label: "Task Tag ID"

@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/project.view"
+
 view: project {
-  sql_table_name: PROJECT ;;
+  extends: [project_config]
+}
+
+view: project_core {
+  sql_table_name: @{SCHEMA_NAME}.PROJECT ;;
   drill_fields: [project_id]
 
   dimension: project_id {

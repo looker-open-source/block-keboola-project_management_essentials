@@ -29,7 +29,7 @@
     height: 2
   - title: Projects w/ Open Tasks
     name: Projects w/ Open Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [project.count]
@@ -56,7 +56,7 @@
     height: 3
   - title: Projects Past Due
     name: Projects Past Due
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [project.count]
@@ -83,7 +83,7 @@
     height: 3
   - title: Task Creation Frequency
     name: Task Creation Frequency
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_line
     fields: [task.count, task.created_at_month]
@@ -129,7 +129,7 @@
     height: 5
   - title: Project Creation Frequency
     name: Project Creation Frequency
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_line
     fields: [project.count, project.created_at_month]
@@ -181,7 +181,7 @@
     height: 5
   - title: Tasks w/ No Assignee
     name: Tasks w/ No Assignee
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task.count]
@@ -198,7 +198,7 @@
     height: 3
   - title: Open Tasks per Assignee (Top 10)
     name: Open Tasks per Assignee (Top 10)
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task.count, task.assignee, task.is_past_due]
@@ -259,7 +259,7 @@
     height: 7
   - title: Past Due Tasks per Assignee (Top 10)
     name: Past Due Tasks per Assignee (Top 10)
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task.count, task.assignee]
@@ -321,7 +321,7 @@
     height: 7
   - title: Open Tasks
     name: Open Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task.count]
@@ -338,7 +338,7 @@
     height: 3
   - title: Tasks Past Due
     name: Tasks Past Due
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task.count]
@@ -366,7 +366,7 @@
     height: 3
   - title: Tasks w/ No Due Date
     name: Tasks w/ No Due Date
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task.count]
@@ -384,7 +384,7 @@
     height: 3
   - title: 5 Most Active Projects in Last 30 Days
     name: 5 Most Active Projects in Last 30 Days
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task_event.count, project.project]
@@ -439,7 +439,7 @@
     height: 7
   - title: 10 Most Active Tasks in Last 30 Days
     name: 10 Most Active Tasks in Last 30 Days
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task_event.count, task.task]
@@ -499,7 +499,7 @@
     default_value: "-EMPTY"
     allow_multiple_values: true
     required: false
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     listens_to_filters: []
     field: task.assignee_type

@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/project_snapshot.view"
+
 view: project_snapshot {
-  sql_table_name: PROJECT_SNAPSHOT ;;
+  extends: [project_snapshot_config]
+}
+
+view: project_snapshot_core {
+  sql_table_name: @{SCHEMA_NAME}.PROJECT_SNAPSHOT ;;
 
   dimension: project_snapshot_id {
     label: "Project Snapshot ID"

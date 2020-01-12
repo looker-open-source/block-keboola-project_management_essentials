@@ -29,7 +29,7 @@
     height: 2
   - title: Marked Incomplete
     name: Marked Incomplete
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_event.count]
@@ -115,7 +115,7 @@
     height: 2
   - title: Marked Complete
     name: Marked Complete
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_event.count]
@@ -201,7 +201,7 @@
     height: 2
   - title: Moved Tasks
     name: Moved Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_snapshot.count]
@@ -235,7 +235,7 @@
     height: 2
   - title: Completed Tasks
     name: Completed Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task.assignee, task.count]
@@ -289,7 +289,7 @@
     height: 6
   - title: Completed As Of Today
     name: Completed As Of Today
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task.count]
@@ -343,7 +343,7 @@
     height: 2
   - title: Re-assigned Tasks
     name: Re-assigned Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_snapshot.count]
@@ -377,7 +377,7 @@
     height: 2
   - title: Re-scheduled Tasks
     name: Re-scheduled Tasks
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_snapshot.count]
@@ -411,7 +411,7 @@
     height: 2
   - title: Users Events
     name: Users Events
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_bar
     fields: [task_event.count, task_event.user, task_event.event]
@@ -497,7 +497,7 @@
     height: 22
   - title: Tasks Re-assignments
     name: Tasks Re-assignments
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_grid
     fields: [task.task, task_snapshot.snapshot_date, task_snapshot.assignee, task_snapshot.previous_assignee]
@@ -532,7 +532,7 @@
     height: 6
   - title: Comments
     name: Comments
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: single_value
     fields: [task_event.count]
@@ -618,7 +618,7 @@
     height: 2
   - title: Tasks w/ Section Change
     name: Tasks w/ Section Change
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_grid
     fields: [task.task, task_snapshot.snapshot_date, task_snapshot.assignee, task_snapshot.section,
@@ -654,7 +654,7 @@
     height: 11
   - title: Tasks w/ Due Date Change
     name: Tasks w/ Due Date Change
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     type: looker_grid
     fields: [task.task, task_snapshot.snapshot_date, task_snapshot.assignee, task_snapshot.due_date,
@@ -710,7 +710,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     listens_to_filters: []
     field: member.user_type
@@ -720,7 +720,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     listens_to_filters: []
     field: task_event.event
@@ -730,7 +730,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: project_management_asana
+    model: block_keboola_project_management_essentials
     explore: project
     listens_to_filters: []
     field: project.project
