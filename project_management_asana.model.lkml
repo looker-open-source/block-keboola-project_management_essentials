@@ -39,6 +39,12 @@ explore: project {
   join: task_follower {
     type: left_outer
     sql_on: ${task.task_id} = ${task_follower.task_id} ;;
+    relationship: one_to_many
+  }
+
+  join: follower {
+    type: left_outer
+    sql_on: ${task_follower.user_id} = ${follower.user_id} ;;
     relationship: many_to_one
   }
 
