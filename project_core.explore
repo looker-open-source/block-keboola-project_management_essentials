@@ -1,17 +1,8 @@
-connection: "keboola_block_asana"
-
-# include all the views
-include: "/*.view"
-
-datagroup: project_management_asana_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
-}
-
-persist_with: project_management_asana_default_datagroup
-
-explore: project {
+explore: project_core {
   label: "Projects & Tasks"
+  hidden: yes
+  extension: required
+  
   join: project_member {
     type: left_outer
     sql_on: ${project.project_id} = ${project_member.project_id} ;;
@@ -71,9 +62,4 @@ explore: project {
     sql_on: ${task.task_id} = ${task_snapshot.task_id} ;;
     relationship: one_to_many
   }
-}
-
-explore: user {
-  label: "Member/Follower"
-  from: member
 }
