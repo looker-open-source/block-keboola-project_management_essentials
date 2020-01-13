@@ -18,6 +18,3 @@ This block is built above data obtained from Asana API, so it’s available to a
 The **Keboola Scaffold** will set up everything for you - from Asana data extraction to data transformation, to setting up the Snowflake database with necessary tables for the LookML. All you need to do is set up the connection to the database in Looker and add it to the Looker model.
 
 In case you want to enrich your Looker model and dashboards with other fields or objects from your Asana instance, you can modify the whole data extraction and processing directly in Keboola Connection.
-
-
------
