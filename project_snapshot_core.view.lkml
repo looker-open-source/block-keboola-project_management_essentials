@@ -10,7 +10,7 @@ view: project_snapshot_core {
   dimension: project_snapshot_id {
     label: "Project Snapshot ID"
     type:  string
-    sql: ${TABLE}."PROJECT_ID"||'_'||${TABLE}."SNAPSHOT_DATE" ;;
+    sql: CONCAT(${TABLE}."PROJECT_ID", '_', ${TABLE}."SNAPSHOT_DATE") ;;
     primary_key: yes
   }
 

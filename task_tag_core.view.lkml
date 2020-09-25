@@ -10,7 +10,7 @@ view: task_tag_core {
   dimension: task_snapshot_id {
     label: "Task Tag ID"
     type:  string
-    sql: ${TABLE}."TASK_ID"||'_'||${TABLE}."TAG" ;;
+    sql: CONCAT(${TABLE}."TASK_ID", '_', ${TABLE}."TAG") ;;
     primary_key: yes
   }
 
